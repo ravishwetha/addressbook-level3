@@ -9,6 +9,8 @@ import java.util.*;
  * Keyword matching is case sensitive.
  */
 public class FindCommand extends Command {
+	
+	public static final boolean isMutating = false;
 
     public static final String COMMAND_WORD = "find";
 
@@ -52,5 +54,10 @@ public class FindCommand extends Command {
         }
         return matchedPersons;
     }
+
+	@Override
+	public boolean isMutating() {
+		return isMutating;
+	}
 
 }

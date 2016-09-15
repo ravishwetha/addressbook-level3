@@ -9,6 +9,8 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
  * Private contact details are shown.
  */
 public class ViewAllCommand extends Command {
+	
+	public static final boolean isMutating = false;
 
     public static final String COMMAND_WORD = "viewall";
 
@@ -37,4 +39,10 @@ public class ViewAllCommand extends Command {
             return new CommandResult(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
         }
     }
+
+
+	@Override
+	public boolean isMutating() {
+		return isMutating;
+	}
 }
