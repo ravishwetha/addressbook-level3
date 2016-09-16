@@ -9,6 +9,8 @@ import seedu.addressbook.Main;
 import java.io.File;
 import java.io.IOException;
 
+import javafx.scene.image.Image;
+
 /**
  * The GUI of the App
  */
@@ -37,9 +39,12 @@ public class Gui {
     private MainWindow createMainWindow(Stage stage, Stoppable mainApp) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("ui" + File.separator + "mainwindow.fxml"));
+        
+        stage.getIcons().add(new Image("file:doc/images/AddressApp.ico"));
         stage.setTitle(version);
         stage.setScene(new Scene(loader.load(), INITIAL_WINDOW_WIDTH, INITIAL_WINDOW_HEIGHT));
         stage.show();
+        
         MainWindow mainWindow = loader.getController();
         mainWindow.setLogic(logic);
         mainWindow.setMainApp(mainApp);

@@ -2,9 +2,9 @@
 
 .text-field {
     -fx-font-size: 12pt;
-    -fx-font-family: "Consolas";
+    -fx-font-family: "Comic-sans";
     -fx-font-weight: bold;
-    -fx-text-fill: yellow;
+    -fx-text-fill: #7cfc00;
     -fx-control-inner-background: derive(#1d1d1d,20%);
 }
 
