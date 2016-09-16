@@ -39,16 +39,16 @@
 Priorities: High (must have) - `* * *`, Medium (nice to have)  - `* *`,  Low (unlikely to have) - `*`
 
 
-Priority | As a ... | I want to ... | So that I can...
+Priority | As a ...  | I want to ... | So that I can...
 -------- | :-------- | :--------- | :-----------
-`* * *` | new user | see usage instructions | refer to instructions when I forget how to use the App
-`* * *` | user | add a new person |
-`* * *` | user | delete a person | remove entries that I no longer need
-`* * *` | user | find a person by name | locate details of persons without having to go through the entire list
-`* * *` | user | edit a person | edit the details of a person without having to delete an existing one then adding the edited person
-`* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
-`*` | user with many persons in the address book | sort persons by name | locate a person easily
-`*` | user | add multiple details of each type to a single person | add more than one phone number, email, etc. to a single contact
+`* * *`  | new user  | see usage instructions | refer to instructions when I forget how to use the App
+`* * *`  | user      | add a new person |
+`* * *`  | user      | delete a person | remove entries that I no longer need
+`* * *`  | user      | find a person by name | locate details of persons without having to go through the entire list
+`* * *`  | user      | edit a person | edit the details of a person without having to delete an existing one then adding the edited person
+`* *`    | user      | hide [private contact details](#private-contact-detail) by default  | minimize chance of someone else seeing them by accident
+`*`      | user with many persons in the address book | sort persons by name | locate a person easily
+`*`      | user | add multiple details of each type to a single person | add more than one phone number, email, etc. to a single contact
 
 
 ## Appendix B : Use Cases
@@ -84,10 +84,12 @@ Use case ends.
 2. AddressBook shows a list of all existing tags
 3. User requests to rename a specific tag with a new name
 4.
-a) the old tag is deleted
-b) a new one is created with the new name
+a) a new tag is created with the new name 
+b) the old tag is deleted
 c) the persons are shifted
 Use case ends.
+5. Addressbook asks for confirmation
+6. User confirms
 
 **Extensions**
 
@@ -100,6 +102,11 @@ Use case ends.
 
 > 3a. Error message <br>
   Use case resumes at step 3
+  
+6. User declines
+
+> 3a. Error message <br>
+  Use case resumes at step 3
 
 ## Appendix C : Non Functional Requirements
 
@@ -107,7 +114,9 @@ Use case ends.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
-5. Each command can be executed under 10 seconds.
+5. Each command executed under 10 seconds.
+6. Developer guide
+7. User Guide
 
 ## Appendix D : Glossary
 
